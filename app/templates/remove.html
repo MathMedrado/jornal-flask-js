@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Remoção de Produtos{% endblock %}
+{% block content %}
+    <h1 align="center"> Lista de produtos cadastrados</h1>
+    <br>
+    <table class="table table-dark">
+        <thead>
+            <tr align="center">
+                <th scope="col" align="center">ID</th>
+                <th scope="col" align="center">Name</th>
+                <th scope="col" align="center">Price</th>
+                <th scope="col" align="center">Type</th>
+                <th scope="col" align="center"></th>
+
+            </tr>
+        </thead>
+    {% for products in lista %}
+
+        <tbody>
+            <tr>
+                <td align="center" id="valueId"> {{ products.id }} </td>
+                <td align="center"> {{ products.name }} </td>
+                <td align="center"> {{ products.price }} </td>
+                <td align="center"> {{ products.type }} </td>
+                <td align="center"><button  class="btn btn-primary" type="button" onclick="passaId({{ products.id }})">  excluir </button></td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+    <script type="text/javascript" src="static/passaId.js"></script>
+
+{% endblock %}

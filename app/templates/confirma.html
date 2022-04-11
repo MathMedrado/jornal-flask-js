@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Exclusão {% endblock %}
+
+{% block content %} 
+<h1>Tem certeza que deseja excluir esse produto? </h1> 
+<div class="buttons"> 
+    <button type="button" onclick="passaId(document.getElementById('1').innerText)" id="1">sim</button>
+    <button type="button" onclick="passaId(document.getElementById('2').innerText)" id="2">não</button>
+</div>
+<script type="text/javascript" src="static/passaId.js"></script>
+
+
+{% endblock %}

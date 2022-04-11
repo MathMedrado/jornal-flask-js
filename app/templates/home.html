@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Mercasol{% endblock %}
+{% block content %}
+    <h1 align="center"> Lista de produtos do supermercado Mercasol</h1>
+    <br>
+    <table class="table table-dark">
+        <thead>
+            <tr align="center">
+                <th scope="col" align="center">Name</th>
+                <th scope="col" align="center">Price</th>
+                <th scope="col" align="center">Type</th>
+                <th scope="col" align="center"></th>
+
+            </tr>
+        </thead>
+    {% for products in lista %}
+
+        <tbody>
+            <tr>
+                <td align="center"> {{ products.name }} </td>
+                <td align="center"> {{ products.price }} </td>
+                <td align="center"> {{ products.type }} </td>
+                <td align="center"><button type="submit" class="btn btn-primary"> Comprar</button></td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+
+{% endblock %}
